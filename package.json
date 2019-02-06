@@ -1,0 +1,48 @@
+{
+  "name": "news_api",
+  "version": "1.0.0",
+  "description": "Consumes NewsAPI Allows search for articles   Displays Thumbnail, Title, Blurb, Link to full article Change display order",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch",
+    "dev": "parcel ./public/index.html",
+    "build": "parcel build ./public/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/james-owen/news_api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/james-owen/news_api/issues"
+  },
+  "homepage": "https://github.com/james-owen/news_api#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.9.1",
+    "jest": "^24.1.0",
+    "latest": "^0.2.0",
+    "parcel-bundler": "^1.11.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react",
+      "@babel/preset-env"
+    ]
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "./test/setuptests.js"
+    ]
+  },
+  "dependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  }
+}
