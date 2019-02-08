@@ -28,7 +28,8 @@
     "enzyme-adapter-react-16": "^1.9.1",
     "jest": "^24.1.0",
     "latest": "^0.2.0",
-    "parcel-bundler": "^1.11.0"
+    "parcel-bundler": "^1.11.0",
+    "serve": "^10.1.2"
   },
   "babel": {
     "presets": [
@@ -42,6 +43,7 @@
     ]
   },
   "dependencies": {
+    "express": "^4.16.4",
     "react": "^16.8.0",
     "react-dom": "^16.8.0"
   }
