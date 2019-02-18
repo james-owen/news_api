@@ -1,14 +1,22 @@
 import React from "react";
+import SearchBar from "./searchBar";
+import Stories from "./stories";
 
-function App () {
-  return(
-    <div className="navbar">
-      <input className="input" type="text" placeholder="Search"></input>
-      <button classname="button">
-      button
-      </button>
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  render() {
+    return(
+    <div>
+    <SearchBar></SearchBar>
+    <Stories></Stories>
     </div>
-  )
+
+    )
+  }
 }
 
 export default App;
