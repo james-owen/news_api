@@ -1,7 +1,14 @@
 import React from "react";
 
-function Story(props) {
-  return <h1>{props.title}</h1>
+function Story(props) {  
+  return (
+    <div class="box">
+      <h1>{props.article.author}</h1>
+      <h2>{props.article.title}</h2>
+      <p>{props.article.description}</p>
+      <img src={props.article.urlToImage}></img>
+    </div>
+    )
 }
 
 class Stories extends React.Component {  
@@ -26,9 +33,19 @@ class Stories extends React.Component {
 
   render() {
     return(
-      <div>
-        <Story title={this.state.articles[0].title}></Story>
-        <Story name="bork2"></Story>
+      <div class="tile is-ancestor">
+        <div class="tile is-parent is-4 is-vertical">
+        <Story article={this.state.articles[0]}></Story>
+        <Story article={this.state.articles[0]}></Story>
+        </div>
+        <div class="tile is-parent is-4 is-vertical">
+        <Story article={this.state.articles[0]}></Story>
+        <Story article={this.state.articles[0]}></Story>
+        </div>
+        <div class="tile is-parent is-4 is-vertical">
+        <Story article={this.state.articles[0]}></Story>
+        <Story article={this.state.articles[0]}></Story>
+        </div>
       </div>
     )
   }
