@@ -15,8 +15,6 @@ class App extends React.Component {
   }
 
   saveArticles(articles) {
-    console.log("RUNNING SAVE")
-    
     const articles0 = [];
     const articles1 = [];
     const articles2 = [];
@@ -40,22 +38,19 @@ class App extends React.Component {
       articles2: articles2,
     }
 
-    console.log("NEW STATE")
-
     this.setState(() => newState, () => {console.log("STATE", this.state)})
-    
   }
 
 
   render() {
     return(
-    <div>
-    <SearchBar saveArticles={this.saveArticles}></SearchBar>
-    <Stories column0={this.state.articles0}
-      column1={this.state.articles1}
-      column2={this.state.articles2}></Stories>
-    </div>
-
+      <div>
+        <SearchBar saveArticles={this.saveArticles}></SearchBar>
+        <Stories 
+          column0={this.state.articles0}
+          column1={this.state.articles1}
+          column2={this.state.articles2}></Stories>
+      </div>
     )
   }
 }

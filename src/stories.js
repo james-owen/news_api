@@ -10,8 +10,6 @@ function Story(props) {
     </div>
     )
 }
-// rewrite saveArticles function in App
-// pass saveArticles to Searchbar
 
 function Stories(props) {  
 

@@ -10,13 +10,11 @@ class SearchBar extends React.Component {
   }
 
   handleChange(event) {
-    // console.log(event.target.value);
     this.setState({searchTerm: event.target.value});
   }
 
   handleSubmit(event) {
     event.preventDefault();
-    // console.log(this.state.searchTerm);
     this.getStories(this.state.searchTerm);
   }
 
@@ -31,10 +29,6 @@ class SearchBar extends React.Component {
     .then((storiesJSON)=> {
       this.props.saveArticles(storiesJSON.articles);
     })
-  }
-
-  componentDidMount(){
-    console.log("SA Function", this.props.saveArticles)
   }
 
   render() {
