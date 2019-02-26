@@ -2,10 +2,10 @@ import React from "react";
 
 function Story(props) {  
   return (
-    <div className="box">
-      <h1>{props.article.author}</h1>
-      <h2>{props.article.title}</h2>
-      <p>{props.article.description}</p>
+    <div className="tile is-child box">
+      <h1 className="title">{props.article.title}</h1>
+      <h2 className="subtitle">{props.article.author}</h2>
+      <p className="content">{props.article.description}</p>
       <img src={props.article.urlToImage}></img>
     </div>
     )
