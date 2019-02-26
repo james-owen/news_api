@@ -29,8 +29,12 @@ class SearchBar extends React.Component {
     fetch(url)
     .then((response) => response.json())
     .then((storiesJSON)=> {
-      console.log(storiesJSON.articles[0])
+      this.props.saveArticles(storiesJSON.articles);
     })
+  }
+
+  componentDidMount(){
+    console.log("SA Function", this.props.saveArticles)
   }
 
   render() {

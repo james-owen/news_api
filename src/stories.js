@@ -2,7 +2,7 @@ import React from "react";
 
 function Story(props) {  
   return (
-    <div class="box">
+    <div className="box">
       <h1>{props.article.author}</h1>
       <h2>{props.article.title}</h2>
       <p>{props.article.description}</p>
@@ -10,17 +10,33 @@ function Story(props) {
     </div>
     )
 }
+// rewrite saveArticles function in App
+// pass saveArticles to Searchbar
 
 function Stories(props) {  
-  return(
-    <div class="tile is-ancestor">
-      <div class="tile is-parent is-4 is-vertical">
-      {this.props.articles0.map(article => {
-        return <Story article={article}></Story>
-      })}
+
+    return(
+      <div className="tile is-ancestor">
+
+        <div className="tile is-parent is-4 is-vertical">
+        {props.column0.map(article => {
+          return <Story article={article} key={article.author}></Story>
+        })}
+        </div>
+
+        <div className="tile is-parent is-4 is-vertical">
+        {props.column1.map(article => {
+          return <Story article={article} key={article.author}></Story>
+        })}
+        </div>
+
+        <div className="tile is-parent is-4 is-vertical">
+        {props.column2.map(article => {
+          return <Story article={article} key={article.author}></Story>
+        })}
+        </div>
       </div>
-    </div>
-  )
+    )
 }
 
 

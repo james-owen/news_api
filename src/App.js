@@ -5,13 +5,21 @@ import Stories from "./stories";
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      articles0:[],
+      articles1: [],
+      articles2: [],
+    };
+
+    this.saveArticles = this.saveArticles.bind(this);
   }
 
   saveArticles(articles) {
-    articles0 = [];
-    articles1 = [];
-    articles2 = [];
+    console.log("RUNNING SAVE")
+    
+    const articles0 = [];
+    const articles1 = [];
+    const articles2 = [];
     
     for (let i = 0; i < articles.length; i += 3) {
       if (articles[i]) {
@@ -26,23 +34,26 @@ class App extends React.Component {
         articles2.push(articles[i+2]);
       } else break;
     }
-
-    this.setState({
+    const newState = {
+      articles0: articles0,
       articles1: articles1,
       articles2: articles2,
-      articles3: articles3
-    })
+    }
+
+    console.log("NEW STATE")
+
+    this.setState(() => newState, () => {console.log("STATE", this.state)})
     
   }
+
 
   render() {
     return(
     <div>
-    <SearchBar></SearchBar>
-    <Stories 
-      articles0={articles0}
-      articles1={articles1}
-      articles2={articles2}></Stories>
+    <SearchBar saveArticles={this.saveArticles}></SearchBar>
+    <Stories column0={this.state.articles0}
+      column1={this.state.articles1}
+      column2={this.state.articles2}></Stories>
     </div>
 
     )
