@@ -21,7 +21,7 @@
   "homepage": "https://github.com/james-owen/news_api#readme",
   "devDependencies": {
     "@babel/cli": "^7.1.0",
-    "@babel/core": "^7.1.0",
+    "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "enzyme": "^3.8.0",
